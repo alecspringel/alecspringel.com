@@ -15,6 +15,8 @@ import "@fontsource/lato";
 
 const theme = {
   background: "#343434",
+  background2: "#242424",
+  background3: "#131313",
   primary: "#27C499",
   headingColor: "#FFF",
   bodyColor: "#BCBCBC",
@@ -37,9 +39,9 @@ const Layout = ({ children }) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}, Built with
+          {/* © {new Date().getFullYear()}, Built with
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Gatsby</a> */}
         </footer>
       </div>
     </ThemeProvider>
