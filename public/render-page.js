@@ -112,19 +112,19 @@ var plugins = [{
   plugin: __webpack_require__(/*! ./node_modules/gatsby-plugin-manifest/gatsby-ssr */ "./node_modules/gatsby-plugin-manifest/gatsby-ssr.js"),
   options: {
     "plugins": [],
-    "name": "gatsby-starter-default",
-    "short_name": "starter",
+    "name": "Alec Springel",
+    "short_name": "Alec Springel",
     "start_url": "/",
-    "background_color": "#663399",
-    "theme_color": "#663399",
+    "background_color": "#343434",
+    "theme_color": "#343434",
     "display": "minimal-ui",
-    "icon": "src/images/gatsby-icon.png",
+    "icon": "src/images/logo.png",
     "legacy": true,
     "theme_color_in_head": true,
     "cache_busting_mode": "query",
     "crossOrigin": "anonymous",
     "include_favicon": true,
-    "cacheDigest": null
+    "cacheDigest": "dacc8152d54fb23ea5998c4177d596cb"
   }
 }]; // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
