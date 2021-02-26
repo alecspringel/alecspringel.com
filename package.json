@@ -1,0 +1,25 @@
+{
+  "name": "alecspringel.com",
+  "version": "1.0.0",
+  "description": "Portfolio and contact website for Alec Springel.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "gatsby develop"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alecspringel/alecspringel.com.git"
+  },
+  "author": "Alec Springel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alecspringel/alecspringel.com/issues"
+  },
+  "homepage": "https://github.com/alecspringel/alecspringel.com#readme",
+  "dependencies": {
+    "gatsby": "^2.32.8",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}
