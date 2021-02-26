@@ -1,5 +1,6 @@
 import React from "react";
 import About from "../components/about/About";
+import Contact from "../components/contact/Contact";
 import Experience from "../components/experience/Experience";
 import Welcome from "../components/home/Welcome";
 import Layout from "../components/layout";
@@ -13,6 +14,7 @@ export default function Home() {
         <Welcome />
         <About />
         <Experience />
+        <Contact />
       </Layout>
     </>
   );
