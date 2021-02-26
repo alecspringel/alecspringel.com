@@ -2,16 +2,19 @@
   "name": "alecspringel.com",
   "version": "1.0.0",
   "description": "Portfolio and contact website for Alec Springel.",
-  "main": "index.js",
+  "author": "Alec Springel <alecspringel@gmail.com>",
   "scripts": {
-    "test": "test",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alecspringel/alecspringel.com.git"
   },
-  "author": "Alec Springel",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/alecspringel/alecspringel.com/issues"
@@ -19,7 +22,17 @@
   "homepage": "https://github.com/alecspringel/alecspringel.com#readme",
   "dependencies": {
     "gatsby": "^2.32.8",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "gatsby-image": "^2.11.0",
+    "gatsby-plugin-gatsby-cloud": "^1.0.2",
+    "gatsby-plugin-manifest": "^2.12.1",
+    "gatsby-plugin-offline": "^3.10.2",
+    "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-sharp": "^2.14.3",
+    "gatsby-source-filesystem": "^2.11.1",
+    "gatsby-transformer-sharp": "^2.12.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   }
 }
