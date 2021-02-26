@@ -9,7 +9,8 @@ const Header = () => {
     <HeaderContainer>
       <Navigation className="flex-row align">
         <div className="flex-row">
-          <LogoImg src={Logo} alt="Alec Logo" /> <h6>Alec Springel</h6>
+          <LogoImg src={Logo} alt="Alec Logo" />
+          <h6 className="heading-color">Alec Springel</h6>
         </div>
         <div className="flex-row align">
           <NavList className="flex-row">
@@ -23,7 +24,9 @@ const Header = () => {
               <Link to="/#contact">Contact</Link>
             </li>
             <li>
-              <NavButton href="/#">Resume</NavButton>
+              <NavButton href="/#" autoWidth>
+                Resume
+              </NavButton>
             </li>
           </NavList>
         </div>

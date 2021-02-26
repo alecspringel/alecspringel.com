@@ -13,7 +13,7 @@ body {
 body {
   font-family: "Lato";
   background-color: #343434;
-  color: #fff;
+  color: var(--bodyColor);
 }
 
 a {
@@ -61,6 +61,52 @@ p {
   font-weight: 400;
   font-size: 18px;
   margin: 0;
+}
+
+/* Colors */
+.primary-color {
+  color: var(--primary);
+}
+
+.heading-color {
+  color: var(--headingColor);
+}
+
+/* Margins */
+.margin-tb5 {
+  margin: 5px 0;
+}
+
+.margin-tb10 {
+  margin: 10px 0;
+}
+
+.margin-tb20 {
+  margin: 20px 0;
+}
+
+.margin-t5 {
+  margin-top: 5px;
+}
+
+.margin-t10 {
+  margin-top: 10px;
+}
+
+.margin-t20 {
+  margin-top: 20px;
+}
+
+.margin-b5 {
+  margin-bottom: 5px;
+}
+
+.margin-b10 {
+  margin-bottom: 10px;
+}
+
+.margin-b20 {
+  margin-bottom: 20px;
 }
 
 .p-small {

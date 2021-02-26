@@ -18,10 +18,11 @@ const StyledBtn = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 10px;
+  padding: 9px 10px;
   border-radius: 2px;
   cursor: pointer;
   transition: background-color 200ms;
+  width: ${(props) => (props.autoWidth ? "auto" : props.width || "100px")};
 
   :hover {
     background-color: ${(props) => props.theme.primary + "10"};
