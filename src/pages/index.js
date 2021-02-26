@@ -7,6 +7,7 @@ export default function Home() {
     <>
       <Layout>
         <SEO title="Home" />
+        <h1>Hello</h1>
       </Layout>
     </>
   );
