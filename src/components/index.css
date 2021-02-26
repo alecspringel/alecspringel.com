@@ -1,7 +1,24 @@
+:root {
+  --background: #343434;
+  --primary: #27c499;
+  --headingColor: #fff;
+  --bodyColor: #bcbcbc;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Lato";
   background-color: #343434;
   color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--bodyColor);
 }
 
 h1,
@@ -12,9 +29,57 @@ h5,
 h6 {
   font-family: "Poppins";
   font-weight: 500;
+  margin: 0;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 44px;
+}
+
+h3 {
+  font-size: 36px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 18px;
 }
 
 p {
   font-family: "Lato";
   font-weight: 400;
+  font-size: 18px;
+  margin: 0;
+}
+
+.p-small {
+  font-size: 16px;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.justify {
+  justify-content: center;
+}
+
+.align {
+  align-items: center;
 }

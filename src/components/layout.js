@@ -7,26 +7,23 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "styled-components";
 import Header from "./Header";
 import "./index.css";
 import "@fontsource/poppins";
 import "@fontsource/lato";
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+const theme = {
+  background: "#343434",
+  primary: "#27C499",
+  headingColor: "#FFF",
+  bodyColor: "#BCBCBC",
+};
 
+const Layout = ({ children }) => {
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+    <ThemeProvider theme={theme}>
+      <Header />
       <div
         style={{
           margin: `0 auto`,
@@ -45,7 +42,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 
