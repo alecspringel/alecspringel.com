@@ -4,7 +4,7 @@ import CirclesFigure from "./CirclesFigure";
 
 const About = () => {
   return (
-    <Section className="flex-row justify" id="about">
+    <Section className="flex-row justify section" id="about">
       <Line />
       <div style={{ position: "relative", flex: 1 }}>
         <CirclesFigure />

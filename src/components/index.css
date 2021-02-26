@@ -87,6 +87,18 @@ p {
   height: 1px;
 }
 
+.dashed-vertical {
+  background-image: linear-gradient(#fff 52%, rgba(255, 255, 255, 0) 20%);
+  background-position: right;
+  background-size: 1px 11px;
+  background-repeat: repeat-y;
+  width: 1px;
+}
+
+.section {
+  padding: 100px 0;
+}
+
 /* Colors */
 .primary-color {
   color: var(--primary);
