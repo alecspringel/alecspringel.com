@@ -35,13 +35,18 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer
+          className="text-center"
           style={{
             marginTop: `2rem`,
           }}
         >
-          {/* © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a> */}
+          Designed and built by Alec Springel with React -
+          <a
+            className="primary-color "
+            href="https://github.com/alecspringel/alecspringel.com"
+          >
+            &nbsp;View on GitHub
+          </a>
         </footer>
       </div>
     </ThemeProvider>

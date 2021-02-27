@@ -75,6 +75,10 @@ p {
   letter-spacing: 0.02em;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .dashed-horizontal {
   background-image: linear-gradient(
     to right,
