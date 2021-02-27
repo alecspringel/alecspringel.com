@@ -95,7 +95,7 @@ const MobileLineWrapper = styled.div`
   width: 90%;
   bottom: 160px;
   @media (max-width: 615px) {
-    width: 110%;
+    width: 95%;
   }
 `;
 
