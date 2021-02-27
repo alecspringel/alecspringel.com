@@ -3,37 +3,48 @@ import styled from "styled-components";
 import Button from "../common/Button";
 import CodeWindowSvg from "../../images/CodeWindow.svg";
 import BrowserFigure from "./BrowserFigure";
+import Header from "../Header";
 
 const Welcome = () => {
   return (
-    <SectionWrapper className="flex-row align">
-      <TextWrapper className="flex-row align">
-        <div>
-          <h6 className="primary-color margin-b10 margin-t20">Hi, I'm</h6>
-          <h1 className="heading-color margin-b10">Alec Springel.</h1>
-          <h3 className="margin-b20">Full-stack software engineer.</h3>
-          <p style={{ maxWidth: 483 }}>
-            A full-stack engineer with a passion for creating solutions to
-            everyday problems. I enjoy building, designing, and deploying
-            scalable software.
-          </p>
-          <Button style={{ marginTop: 50 }} width="120px" href="/#contact">
-            Say Hello
-          </Button>
-        </div>
-      </TextWrapper>
-      <Figure>
-        <CodeWindow src={CodeWindowSvg} />
-        <BrowserFigure />
-      </Figure>
-    </SectionWrapper>
+    <>
+      <Header isClear />
+      <Wrapper>
+        <Gradient />
+        <Background />
+        <SectionWrapper className="flex-row align">
+          <TextWrapper className="flex-row align">
+            <div style={{ marginTop: 90 }}>
+              <h6 className="primary-color margin-b10 margin-t20">Hi, I'm</h6>
+              <h1 className="heading-color margin-b10">Alec Springel.</h1>
+              <h3 className="heading-color margin-b20">
+                A full-stack software engineer.
+              </h3>
+              <p style={{ maxWidth: 483 }}>
+                A full-stack engineer with a passion for creating solutions to
+                everyday problems. I enjoy building, designing, and deploying
+                scalable software.
+              </p>
+              <Button style={{ marginTop: 50 }} width="120px" href="/#contact">
+                Say Hello
+              </Button>
+            </div>
+          </TextWrapper>
+          <Figure>
+            <CodeWindow src={CodeWindowSvg} />
+            <BrowserFigure />
+          </Figure>
+        </SectionWrapper>
+      </Wrapper>
+    </>
   );
 };
 
 export default Welcome;
 
 const SectionWrapper = styled.section`
-  min-height: 90vh;
+  height: 90vh;
+  max-height: 860px;
   transform: scale(1.2);
   max-width: 1260px;
   margin: auto;
@@ -43,17 +54,75 @@ const SectionWrapper = styled.section`
   @media (max-width: 1560px) {
     transform: scale(1);
   }
-  /* @media (max-width: 725px) {
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-  } */
+`;
+
+const Gradient = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    45deg,
+    #f17c58,
+    #e94584,
+    #24aadb,
+    #27dbb1,
+    #ffdc18,
+    #ff3706
+  );
+  background-size: 600% 100%;
+  animation: gradient 16s linear infinite;
+  animation-direction: alternate;
+  @keyframes gradient {
+    0% {
+      background-position: 0%;
+    }
+    100% {
+      background-position: 100%;
+    }
+  }
+`;
+
+const Wrapper = styled.div`
+  position: relative;
+`;
+
+const Background = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    9deg,
+    rgb(52, 52, 52) 59%,
+    #0000005c 59%,
+    #00000000 60%,
+    transparent 59%
+  );
+  width: 100%;
+  height: 100%;
+  @media (max-width: 1200px) {
+    background: linear-gradient(
+      18deg,
+      rgb(52, 52, 52) 63%,
+      #0000005c 59%,
+      #00000000 60%,
+      transparent 63%
+    );
+  }
+  @media (max-width: 725px) {
+    background: linear-gradient(9deg, rgb(52, 52, 52) 0%, #00000069 0%);
+  }
 `;
 
 const TextWrapper = styled.div`
   min-width: 367px;
   @media (max-width: 725px) {
     min-width: auto;
+    * {
+      color: #fff;
+      border-color: #fff;
+    }
   }
 `;
 

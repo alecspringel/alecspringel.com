@@ -47,7 +47,10 @@ const CirclesFigure = () => {
 export default CirclesFigure;
 
 const ShiftWrapper = styled.div`
-  margin-left: -100px;
+  margin-left: -200px;
+  @media (max-width: 1046px) {
+    margin-left: 0;
+  }
 `;
 
 const Container = styled.div`
@@ -64,7 +67,7 @@ const Container = styled.div`
 const ProfileImg = styled.img`
   height: 224px;
   width: 224px;
-  margin-right: -15%;
+  margin-right: -21%;
   filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.16));
 `;
 

@@ -63,6 +63,7 @@ const Section = styled.section`
   align-items: center;
   position: relative;
   padding-top: 0px;
+  padding-bottom: 100px;
   @media (max-width: 1046px) {
     flex-direction: column;
   }
@@ -95,7 +96,7 @@ const MobileLineWrapper = styled.div`
   width: 90%;
   bottom: 160px;
   @media (max-width: 615px) {
-    width: 110%;
+    width: 95%;
   }
 `;
 
