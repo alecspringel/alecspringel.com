@@ -8,6 +8,12 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "alecspringel.com",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,

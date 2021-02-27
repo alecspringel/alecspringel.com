@@ -6,6 +6,7 @@
   "scripts": {
     "start": "gatsby develop",
     "build": "gatsby build",
+    "deploy": "npm run build && gatsby-plugin-s3 deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
@@ -30,6 +31,7 @@
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-react-helmet": "^3.10.0",
+    "gatsby-plugin-s3": "^0.3.8",
     "gatsby-plugin-sharp": "^2.14.3",
     "gatsby-plugin-styled-components": "^3.10.0",
     "gatsby-source-filesystem": "^2.11.1",
