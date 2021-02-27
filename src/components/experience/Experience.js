@@ -4,7 +4,9 @@ import styled from "styled-components";
 const Experience = () => {
   return (
     <section className="flex-col align justify section" id="experience">
-      <h3 style={{ marginBottom: 60 }}>Experience</h3>
+      <h3 style={{ marginBottom: 60 }} className="heading-color">
+        Experience
+      </h3>
       {/* NIKE */}
       <Tile>
         <Date>

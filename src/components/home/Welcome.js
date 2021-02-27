@@ -33,7 +33,7 @@ const Welcome = () => {
 export default Welcome;
 
 const SectionWrapper = styled.section`
-  padding: 170px 0;
+  padding: 0;
   min-height: 90vh;
   transform: scale(1.2);
   padding-top: 0;
