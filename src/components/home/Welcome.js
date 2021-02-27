@@ -6,8 +6,8 @@ import BrowserFigure from "./BrowserFigure";
 
 const Welcome = () => {
   return (
-    <SectionWrapper className="flex-row">
-      <div style={{ flex: 1.1 }} className="flex-row align">
+    <SectionWrapper className="flex-row align">
+      <TextWrapper className="flex-row align">
         <div>
           <h6 className="primary-color margin-b10">Hi, I'm</h6>
           <h1 className="heading-color margin-b10">Alec Springel.</h1>
@@ -21,7 +21,7 @@ const Welcome = () => {
             Say Hello
           </Button>
         </div>
-      </div>
+      </TextWrapper>
       <Figure>
         <CodeWindow src={CodeWindowSvg} />
         <BrowserFigure />
@@ -41,22 +41,26 @@ const SectionWrapper = styled.section`
   @media (max-width: 1560px) {
     transform: scale(1);
   }
-  @media (max-width: 989px) {
+  /* @media (max-width: 725px) {
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
+  } */
+`;
+
+const TextWrapper = styled.div`
+  min-width: 367px;
+  @media (max-width: 725px) {
+    min-width: auto;
   }
 `;
 
 const Figure = styled.figure`
-  display: flex;
-  align-items: center;
-  flex: 1;
   position: relative;
-  @media (max-width: 1060px) {
-    transform: scale(0.8);
+  @media (max-width: 725px) {
+    display: none;
+    margin-bottom: 40px;
   }
 `;
 
-const CodeWindow = styled.img`
-  position: absolute;
-`;
+const CodeWindow = styled.img``;

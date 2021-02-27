@@ -74,13 +74,9 @@ const GridWrapper = styled.div`
 `;
 
 const Wrapper = styled.div`
-  width: 496px;
-  height: 319px;
-  opacity: 1;
-  position: relative;
-  top: 114px;
-  left: 114px;
-  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  left: 20%;
 `;
 
 const Background = styled.div`
@@ -89,6 +85,7 @@ const Background = styled.div`
   background: rgba(255, 255, 255, 0.4099999964237213);
   border-radius: 5px;
   backdrop-filter: blur(2px);
+  position: relative;
 `;
 
 const TopBar = styled.div`
