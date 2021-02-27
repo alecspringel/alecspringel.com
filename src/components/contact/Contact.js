@@ -56,10 +56,10 @@ const ContactCard = styled.a`
   margin: 20px;
   border-radius: 6px;
   box-shadow: 0px 4.59773px 22.9887px rgba(0, 0, 0, 0.25);
-  padding: 40px;
+  padding: 40px 20px;
   width: 226px;
   @media (max-width: 1256px) {
-    flex: 40%;
+    flex: 43%;
   }
 `;
 
