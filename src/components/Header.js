@@ -10,10 +10,10 @@ const Header = () => {
   return (
     <HeaderContainer>
       <Navigation className="flex-row align">
-        <div className="flex-row align">
+        <a className="flex-row align" href="/#">
           <LogoImg src={Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
-        </div>
+        </a>
         <div className="flex-row align">
           <NavList className="flex-row">
             <li>
@@ -26,7 +26,7 @@ const Header = () => {
               <Link to="/#contact">Contact</Link>
             </li>
             <li>
-              <NavButton href="/#" autoWidth>
+              <NavButton href="/resume.pdf" target="_blank" autoWidth>
                 Resume
               </NavButton>
             </li>
@@ -34,11 +34,11 @@ const Header = () => {
         </div>
       </Navigation>
       <MobileNavigation className="flex-row align">
-        <div className="flex-row align">
+        <a className="flex-row align" href="/#">
           <LogoImg src={Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
-        </div>
-        <MobileNav height="158px">
+        </a>
+        <MobileNav height="214px">
           <MobileOption>
             <Link to="/#about">About</Link>
           </MobileOption>
@@ -47,6 +47,11 @@ const Header = () => {
           </MobileOption>
           <MobileOption>
             <Link to="/#contact">Contact</Link>
+          </MobileOption>
+          <MobileOption>
+            <NavButton href="/resume.pdf" target="_blank" width="100px">
+              Resume
+            </NavButton>
           </MobileOption>
         </MobileNav>
       </MobileNavigation>
