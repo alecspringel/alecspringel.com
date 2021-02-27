@@ -47,7 +47,10 @@ const CirclesFigure = () => {
 export default CirclesFigure;
 
 const ShiftWrapper = styled.div`
-  margin-left: -100px;
+  margin-left: -200px;
+  @media (max-width: 1046px) {
+    margin-left: 0;
+  }
 `;
 
 const Container = styled.div`
