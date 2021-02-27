@@ -30,7 +30,7 @@ const Contact = () => {
           target="_blank"
         >
           <Icon src={Linkedin} />
-          <h6 className="heading-color">Linkedin</h6>
+          <h6 className="heading-color">LinkedIn</h6>
           <p className="primary-color">alec-springel</p>
         </ContactCard>
         <ContactCard href="https://github.com/alecspringel" target="_blank">

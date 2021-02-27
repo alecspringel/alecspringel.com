@@ -63,6 +63,7 @@ const Section = styled.section`
   align-items: center;
   position: relative;
   padding-top: 0px;
+  padding-bottom: 100px;
   @media (max-width: 1046px) {
     flex-direction: column;
   }

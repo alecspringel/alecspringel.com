@@ -31,6 +31,7 @@ const Layout = ({ children }) => {
         className="text-center"
         style={{
           marginTop: `2rem`,
+          padding: `2rem`,
         }}
       >
         Designed and built by Alec Springel with React -
