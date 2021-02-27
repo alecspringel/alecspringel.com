@@ -33,10 +33,12 @@ const Welcome = () => {
 export default Welcome;
 
 const SectionWrapper = styled.section`
-  padding: 0;
   min-height: 90vh;
   transform: scale(1.2);
-  padding-top: 0;
+  max-width: 1260px;
+  margin: auto;
+  overflow-x: hidden;
+  padding: 0 2rem;
 
   @media (max-width: 1560px) {
     transform: scale(1);

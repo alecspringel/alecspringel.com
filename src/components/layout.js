@@ -26,29 +26,21 @@ const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <div
+      <main>{children}</main>
+      <footer
+        className="text-center"
         style={{
-          margin: `70px auto`,
-          maxWidth: 1260,
-          padding: `0 2rem`,
+          marginTop: `2rem`,
         }}
       >
-        <main>{children}</main>
-        <footer
-          className="text-center"
-          style={{
-            marginTop: `2rem`,
-          }}
+        Designed and built by Alec Springel with React -
+        <a
+          className="primary-color "
+          href="https://github.com/alecspringel/alecspringel.com"
         >
-          Designed and built by Alec Springel with React -
-          <a
-            className="primary-color "
-            href="https://github.com/alecspringel/alecspringel.com"
-          >
-            &nbsp;View on GitHub
-          </a>
-        </footer>
-      </div>
+          &nbsp;View on GitHub
+        </a>
+      </footer>
     </ThemeProvider>
   );
 };

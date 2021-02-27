@@ -93,10 +93,9 @@ const Experience = () => {
         </TitleBar>
         <TextPadding>
           <p>
-            Last Layer was founded after
-            <span className="primary-color">&nbsp;farmPlot</span> gained
-            traction. Last Layer serves as the parent company for farmPlot and
-            any future software that will be available publicly.
+            Streamlined workflows for fellow employees, managed and found new
+            accounts, created marketing campaigns, advertised customer products
+            at events, and managed client data.
           </p>
         </TextPadding>
       </Tile>
