@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { css } from "styled-components";
 import ClickAway from "../common/ClickAway";
 
-const MobileNav = ({ children, height }) => {
+const MobileNav = ({ children, height, isClear }) => {
   const [open, toggle] = useState(false);
   return (
     <ClickAway
@@ -13,7 +13,7 @@ const MobileNav = ({ children, height }) => {
         <>
           <Wrapper>
             <MenuIcon src={require("../../images/hamburger-menu.svg")} />
-            <Options open={open} height={height}>
+            <Options open={open} height={height} isClear={isClear}>
               <ul>{children}</ul>
             </Options>
           </Wrapper>
@@ -48,6 +48,7 @@ const Options = styled.div`
   ${(props) =>
     props.open &&
     css`
+      background: #000000db;
       transition: max-height 150ms ease-in-out;
       max-height: ${(props) => props.height};
       box-shadow: 2px 3px 3px #00000033;

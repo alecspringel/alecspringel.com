@@ -1,21 +1,44 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { css } from "styled-components";
 import Logo from "../images/logo.svg";
+import WhiteLogo from "../images/logo-white.svg";
 import { Link } from "gatsby";
 import Button from "./common/Button";
 import MobileNav from "./mobileNav/MobileNav";
 import MobileOption from "./mobileNav/MobileOption";
 
-const Header = () => {
+const Header = ({ isClear }) => {
+  const [isVisible, toggleVisibility] = useState(isClear ? true : false);
+  const handleScroll = () => {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset > 500) {
+      console.log("visible");
+      toggleVisibility(true);
+    } else {
+      console.log("notvisible");
+      toggleVisibility(false);
+    }
+  };
+  console.log(isVisible);
+
+  useEffect(() => {
+    if (!isClear) {
+      window.addEventListener("scroll", handleScroll);
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
+  }, [isClear]);
+
   return (
-    <HeaderContainer>
+    <HeaderContainer isVisible={isVisible} isClear={isClear}>
       <Navigation className="flex-row align">
         <a className="flex-row align" href="/#">
-          <LogoImg src={Logo} alt="Alec Logo" />
+          <LogoImg src={isClear ? WhiteLogo : Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
         </a>
         <div className="flex-row align">
-          <NavList className="flex-row">
+          <NavList className="flex-row" isClear={isClear}>
             <li>
               <Link to="/#about">About</Link>
             </li>
@@ -35,10 +58,10 @@ const Header = () => {
       </Navigation>
       <MobileNavigation className="flex-row align">
         <a className="flex-row align" href="/#">
-          <LogoImg src={Logo} alt="Alec Logo" />
+          <LogoImg src={isClear ? WhiteLogo : Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
         </a>
-        <MobileNav height="214px">
+        <MobileNav height="214px" isClear={isClear}>
           <MobileOption>
             <Link to="/#about">About</Link>
           </MobileOption>
@@ -67,9 +90,28 @@ const HeaderContainer = styled.header`
   left: 0;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-  background-color: ${(props) => props.theme.background};
+  background-color: ${(props) =>
+    props.isClear ? "transparent" : props.theme.background};
   height: 70px;
   z-index: 10;
+  transition: all 1s ease;
+  ${(props) =>
+    !props.isVisible &&
+    css`
+      top: -100%;
+    `}
+
+  ${(props) =>
+    props.isClear &&
+    css`
+      position: absolute;
+      box-shadow: none;
+      * {
+        color: white;
+        font-weight: 600;
+        border-color: white;
+      }
+    `}
 `;
 
 const Navigation = styled.nav`
@@ -112,10 +154,17 @@ const NavList = styled.ul`
   }
 
   a {
-    /* color: ${(props) => props.theme.bodyColor}; */
     :hover {
       color: ${(props) => props.theme.primary};
     }
+    ${(props) =>
+      props.isClear &&
+      css`
+        :hover {
+          color: ${(props) => "#fff"};
+          opacity: ${(props) => "0.8"};
+        }
+      `}
   }
 `;
 

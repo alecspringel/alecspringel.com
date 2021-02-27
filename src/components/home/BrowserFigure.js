@@ -135,7 +135,7 @@ const Control3 = styled(WindowControl)`
 const ItemBg = styled.div`
   width: 133px;
   height: 113px;
-  background: rgba(225, 225, 225, 1);
+  background: #d4d4d4a3;
   border-radius: 6px;
 `;
 
