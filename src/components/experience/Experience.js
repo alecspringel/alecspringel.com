@@ -13,17 +13,22 @@ const Experience = () => {
           <p>March 2021 - Present</p>
         </Date>
         <TitleBar className="flex-row align">
-          <h6 className="heading-color">Nike,</h6>
-          <p>&nbsp;Software Engineer</p>
+          <h6 className="heading-color">Nike,&nbsp;</h6>
+          <p>Software Engineer</p>
+          <MobileDate>
+            <p>March 2021 - Present</p>
+          </MobileDate>
         </TitleBar>
-        <p>
-          Write and test code for internal systems, utilizing frontend and
-          backend technologies including NodeJS, ReactJS, AWS Lambda, DynamoDB,
-          and more.
-          <br />
-          <br />
-          Contracted by ProUnlimited.
-        </p>
+        <TextPadding>
+          <p>
+            Write and test code for internal systems, utilizing frontend and
+            backend technologies including NodeJS, ReactJS, AWS Lambda,
+            DynamoDB, and more.
+            <br />
+            <br />
+            Contracted by ProUnlimited.
+          </p>
+        </TextPadding>
       </Tile>
       <Line className="dashed-vertical" />
       {/* BRING RECYCLING */}
@@ -32,14 +37,22 @@ const Experience = () => {
           <p>October 2020 - Present</p>
         </Date>
         <TitleBar className="flex-row align">
-          <h6 className="heading-color">BRING Recycling,</h6>
-          <p>&nbsp;Software Engineer (Volunteer)</p>
+          <h6 className="heading-color">BRING Recycling,&nbsp;</h6>
+          <p>Software Engineer (Volunteer)</p>
+          <MobileDate>
+            <p>October 2020 - Present</p>
+          </MobileDate>
         </TitleBar>
-        <p>
-          Responsible for designing, developing, deploying, and maintaining the
-          BRING Recycling
-          <span className="primary-color">Virtual Donation Manager</span>.
-        </p>
+        <TextPadding>
+          <p>
+            Responsible for designing, developing, deploying, and maintaining
+            the BRING Recycling
+            <span className="primary-color">
+              &nbsp;Virtual Donation Manager
+            </span>
+            .
+          </p>
+        </TextPadding>
       </Tile>
       <Line className="dashed-vertical" />
       {/* LAST LAYER LLC */}
@@ -48,15 +61,20 @@ const Experience = () => {
           <p>February 2019 - Present</p>
         </Date>
         <TitleBar className="flex-row align">
-          <h6 className="heading-color">Last Layer LLC,</h6>
-          <p>&nbsp;Founder &amp; Software Engineer</p>
+          <h6 className="heading-color">Last Layer LLC,&nbsp;</h6>
+          <p>Founder &amp; Software Engineer</p>
+          <MobileDate>
+            <p>February 2019 - Present</p>
+          </MobileDate>
         </TitleBar>
-        <p>
-          Last Layer was founded after
-          <span className="primary-color">&nbsp;farmPlot</span> gained traction.
-          Last Layer serves as the parent company for farmPlot and any future
-          software that will be available publicly.
-        </p>
+        <TextPadding>
+          <p>
+            Last Layer was founded after
+            <span className="primary-color">&nbsp;farmPlot</span> gained
+            traction. Last Layer serves as the parent company for farmPlot and
+            any future software that will be available publicly.
+          </p>
+        </TextPadding>
       </Tile>
       <Line className="dashed-vertical" />
       {/* 209 & MoCap */}
@@ -65,15 +83,22 @@ const Experience = () => {
           <p>June 2017 - September 2017</p>
         </Date>
         <TitleBar className="flex-row align">
-          <h6 className="heading-color">209 Group &amp; Mocap Solutions,</h6>
-          <p>&nbsp;Engineering Intern</p>
+          <h6 className="heading-color">
+            209 Group &amp; Mocap Solutions,&nbsp;
+          </h6>
+          <p>Engineering Intern</p>
+          <MobileDate>
+            <p>June 2017 - September 2017</p>
+          </MobileDate>
         </TitleBar>
-        <p>
-          Last Layer was founded after
-          <span className="primary-color">&nbsp;farmPlot</span> gained traction.
-          Last Layer serves as the parent company for farmPlot and any future
-          software that will be available publicly.
-        </p>
+        <TextPadding>
+          <p>
+            Last Layer was founded after
+            <span className="primary-color">&nbsp;farmPlot</span> gained
+            traction. Last Layer serves as the parent company for farmPlot and
+            any future software that will be available publicly.
+          </p>
+        </TextPadding>
       </Tile>
     </section>
   );
@@ -86,25 +111,41 @@ const Tile = styled.div`
   border-radius: 6px;
   background-color: ${(props) => props.theme.background2};
   box-shadow: 0px 6px 30px rgba(0, 0, 0, 0.25);
-  padding: 66px 29px 25px 29px;
   text-align: left;
   max-width: 800px;
 `;
 
 const TitleBar = styled.div`
-  position: absolute;
   border-radius: 6px 6px 0 0;
   width: 100%;
-  top: 0;
-  left: 0;
   padding: 10px 29px;
   background-color: ${(props) => props.theme.background3};
+  @media (max-width: 665px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+`;
+
+const TextPadding = styled.div`
+  padding: 25px 29px;
 `;
 
 const Date = styled.div`
   position: absolute;
   top: -33px;
   left: 29px;
+  display: block;
+  @media (max-width: 665px) {
+    display: none;
+  }
+`;
+
+const MobileDate = styled.div`
+  display: none;
+  margin-top: 12px;
+  @media (max-width: 665px) {
+    display: block;
+  }
 `;
 
 const Line = styled.div`
