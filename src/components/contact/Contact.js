@@ -15,22 +15,25 @@ const Contact = () => {
         email and I will get back to you as soon as possible.
       </Description>
       <FlexWrapper className="flex-row" style={{ marginTop: 80 }}>
-        <ContactCard>
+        <ContactCard href="tel:702-290-0858">
           <Icon src={Phone} />
           <h6 className="heading-color">Cell Phone</h6>
           <p className="primary-color">+1 (702)-290-0858</p>
         </ContactCard>
-        <ContactCard>
+        <ContactCard href="mailto:alecspringel@gmail.com">
           <Icon src={Email} />
           <h6 className="heading-color">Email</h6>
           <p className="primary-color">alecspringel@gmail.com</p>
         </ContactCard>
-        <ContactCard>
+        <ContactCard
+          href="https://www.linkedin.com/in/alec-springel/"
+          target="_blank"
+        >
           <Icon src={Linkedin} />
           <h6 className="heading-color">Linkedin</h6>
           <p className="primary-color">alec-springel</p>
         </ContactCard>
-        <ContactCard>
+        <ContactCard href="https://github.com/alecspringel" target="_blank">
           <Icon src={GitHub} />
           <h6 className="heading-color">GitHub</h6>
           <p className="primary-color">@alecspringel</p>
