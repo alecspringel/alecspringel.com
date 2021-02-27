@@ -31,35 +31,25 @@ const About = () => {
             <h6 className="heading-color">Skills</h6>
           </SkillsTitle>
           <ul>
-            JavaScript
-            <br />
-            Python
-            <br />
-            NodeJS
-            <br />
-            Git
-            <br />
-            REST
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>NodeJS</li>
+            <li>Git</li>
+            <li>REST</li>
           </ul>
           <ul>
-            HTML 5<br />
-            CSS 3<br />
-            ReactJS
-            <br />
-            React Native
-            <br />
-            GraphQL
+            <li>HTML 5</li>
+            <li>CSS 3</li>
+            <li>ReactJS</li>
+            <li>React Native</li>
+            <li>GraphQL</li>
           </ul>
           <ul>
-            MongoDB
-            <br />
-            AWS
-            <br />
-            AdobeXD
-            <br />
-            Figma
-            <br />
-            ElectronJS
+            <li>MongoDB</li>
+            <li>AWS</li>
+            <li>AdobeXD</li>
+            <li>Figma</li>
+            <li>ElectronJS</li>
           </ul>
         </SkillsDiv>
       </TextWrapper>
@@ -72,6 +62,7 @@ export default About;
 const Section = styled.section`
   align-items: center;
   position: relative;
+  padding-top: 0px;
   @media (max-width: 1046px) {
     flex-direction: column;
   }
@@ -100,7 +91,7 @@ const MobileLineWrapper = styled.div`
     display: block;
   }
   position: absolute;
-  height: 59%;
+  height: 65%;
   width: 90%;
   bottom: 160px;
   @media (max-width: 615px) {
@@ -128,7 +119,11 @@ const Line = styled.div`
 
 const TextWrapper = styled.div`
   margin-left: 20px;
-  @media (max-width: 780px) {
+  @media (max-width: 550px) {
+    margin-top: -60px;
+  }
+  @media (max-width: 450px) {
+    margin-top: -120px;
   }
 `;
 
@@ -154,6 +149,15 @@ const SkillsDiv = styled.div`
   @media (max-width: 450px) {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+  }
+
+  li {
+    margin: 5px 0;
   }
 `;
 
