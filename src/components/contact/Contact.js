@@ -47,6 +47,7 @@ export default Contact;
 
 const Section = styled.section`
   text-align: center;
+  padding-top: 20px;
 `;
 
 const FlexWrapper = styled.div`

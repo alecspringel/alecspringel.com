@@ -17,7 +17,7 @@ const Welcome = () => {
             everyday problems. I enjoy building, designing, and deploying
             scalable software.
           </p>
-          <Button style={{ marginTop: 50 }} width="120px">
+          <Button style={{ marginTop: 50 }} width="120px" href="/#contact">
             Say Hello
           </Button>
         </div>
