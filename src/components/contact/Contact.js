@@ -62,8 +62,20 @@ const ContactCard = styled.a`
   box-shadow: 0px 4.59773px 22.9887px rgba(0, 0, 0, 0.25);
   padding: 40px 20px;
   width: 226px;
+  transition: 150ms ease;
   @media (max-width: 1256px) {
     flex: 43%;
+  }
+
+  :hover {
+    transform: translateY(-4px);
+    background: ${(props) => "#353535"};
+    img {
+      transition: 150ms ease;
+      transform: translateY(-4px);
+      transform: scale(1.1);
+      filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
+    }
   }
 `;
 
