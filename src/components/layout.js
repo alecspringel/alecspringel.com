@@ -34,7 +34,8 @@ const Layout = ({ children }) => {
           padding: `2rem`,
         }}
       >
-        Designed and built by Alec Springel with React -
+        <div style={{ marginBottom: 5 }}>Copyright © 2021 Alec Springel</div>
+        Designed and built by Alec Springel -
         <a
           className="primary-color "
           href="https://github.com/alecspringel/alecspringel.com"
