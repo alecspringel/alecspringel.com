@@ -9,7 +9,7 @@ const Welcome = () => {
     <SectionWrapper className="flex-row align">
       <TextWrapper className="flex-row align">
         <div>
-          <h6 className="primary-color margin-b10">Hi, I'm</h6>
+          <h6 className="primary-color margin-b10 margin-t20">Hi, I'm</h6>
           <h1 className="heading-color margin-b10">Alec Springel.</h1>
           <h3 className="margin-b20">Full-stack software engineer.</h3>
           <p style={{ maxWidth: 483 }}>

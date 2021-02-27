@@ -3,12 +3,14 @@ import styled from "styled-components";
 import Logo from "../images/logo.svg";
 import { Link } from "gatsby";
 import Button from "./common/Button";
+import MobileNav from "./mobileNav/MobileNav";
+import MobileOption from "./mobileNav/MobileOption";
 
 const Header = () => {
   return (
     <HeaderContainer>
       <Navigation className="flex-row align">
-        <div className="flex-row">
+        <div className="flex-row align">
           <LogoImg src={Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
         </div>
@@ -31,6 +33,23 @@ const Header = () => {
           </NavList>
         </div>
       </Navigation>
+      <MobileNavigation className="flex-row align">
+        <div className="flex-row align">
+          <LogoImg src={Logo} alt="Alec Logo" />
+          <h6 className="heading-color">Alec Springel</h6>
+        </div>
+        <MobileNav height="158px">
+          <MobileOption>
+            <Link to="/#about">About</Link>
+          </MobileOption>
+          <MobileOption>
+            <Link to="/#experience">Experience</Link>
+          </MobileOption>
+          <MobileOption>
+            <Link to="/#contact">Contact</Link>
+          </MobileOption>
+        </MobileNav>
+      </MobileNavigation>
     </HeaderContainer>
   );
 };
@@ -52,6 +71,19 @@ const Navigation = styled.nav`
   padding: 0 29px;
   height: 100%;
   justify-content: space-between;
+  @media (max-width: 655px) {
+    display: none;
+  }
+`;
+
+const MobileNavigation = styled.nav`
+  display: none;
+  padding: 0 29px;
+  height: 100%;
+  justify-content: space-between;
+  @media (max-width: 655px) {
+    display: flex;
+  }
 `;
 
 const LogoImg = styled.img`

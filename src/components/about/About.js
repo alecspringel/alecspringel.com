@@ -100,7 +100,7 @@ const MobileLineWrapper = styled.div`
     display: block;
   }
   position: absolute;
-  height: 55%;
+  height: 59%;
   width: 90%;
   bottom: 160px;
   @media (max-width: 615px) {
