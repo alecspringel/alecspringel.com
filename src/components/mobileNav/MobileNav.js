@@ -48,7 +48,7 @@ const Options = styled.div`
   ${(props) =>
     props.open &&
     css`
-      background: #000000db;
+      background: ${(props) => props.isClear && "#000000de"};
       transition: max-height 150ms ease-in-out;
       max-height: ${(props) => props.height};
       box-shadow: 2px 3px 3px #00000033;
