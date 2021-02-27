@@ -86,6 +86,12 @@ const FigureWrapper = styled.figure`
   @media (max-width: 780px) {
     transform: scale(0.7);
   }
+  @media (max-width: 550px) {
+    transform: scale(0.6);
+  }
+  @media (max-width: 450px) {
+    transform: scale(0.4);
+  }
 `;
 
 const MobileLineWrapper = styled.div`
@@ -97,6 +103,9 @@ const MobileLineWrapper = styled.div`
   height: 55%;
   width: 90%;
   bottom: 160px;
+  @media (max-width: 615px) {
+    width: 110%;
+  }
 `;
 
 const MobileLineDiv = styled.div`
@@ -142,6 +151,10 @@ const SkillsDiv = styled.div`
   justify-content: space-between;
   margin-top: 30px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.25);
+  @media (max-width: 450px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 const AboutP = styled.p`
