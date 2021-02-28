@@ -7,19 +7,20 @@ import Button from "./common/Button";
 import MobileNav from "./mobileNav/MobileNav";
 import MobileOption from "./mobileNav/MobileOption";
 
+/* isClear prop is used to separate the clear header/navigation
+used in the hero section, from the header/nav that dropsdown after
+scrolling. isVisible variable determines wether or not to display
+the global navigation bar (which appears after scrolling down the page) */
+
 const Header = ({ isClear }) => {
   const [isVisible, toggleVisibility] = useState(isClear ? true : false);
   const handleScroll = () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset > 500) {
-      console.log("visible");
       toggleVisibility(true);
     } else {
-      console.log("notvisible");
       toggleVisibility(false);
     }
   };
-  console.log(isVisible);
 
   useEffect(() => {
     if (!isClear) {

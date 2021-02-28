@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <Layout>
-        <SEO title="Home" />
+        <SEO />
         <Welcome />
         <About />
         <Experience />

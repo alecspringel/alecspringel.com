@@ -1,7 +1,9 @@
 module.exports = {
   siteMetadata: {
     title: `Alec Springel`,
-    description: `Full-stack engineer looking for creative solutions to everyday problems.`,
+    description: `A full-stack engineer looking for creative solutions to everyday problems.`,
+    url: "https://www.alecspringel.com",
+    image: "/images/hero.jpg",
     author: `@alecspringel`,
   },
   plugins: [
