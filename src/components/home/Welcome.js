@@ -4,6 +4,7 @@ import Button from "../common/Button";
 import CodeWindowSvg from "../../images/CodeWindow.svg";
 import BrowserFigure from "./BrowserFigure";
 import Header from "../Header";
+import FadeIn from "../common/animation/FadeIn";
 
 const Welcome = () => {
   return (
@@ -31,8 +32,15 @@ const Welcome = () => {
             </div>
           </TextWrapper>
           <Figure>
-            <CodeWindow src={CodeWindowSvg} />
-            <BrowserFigure />
+            <FadeIn delay={300}>
+              <CodeWindow src={CodeWindowSvg} />
+            </FadeIn>
+            <FadeIn
+              style={{ position: "absolute", top: "30%", left: "20%" }}
+              delay={500}
+            >
+              <BrowserFigure />
+            </FadeIn>
           </Figure>
         </SectionWrapper>
       </Wrapper>

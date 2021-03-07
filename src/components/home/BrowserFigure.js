@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const BrowserFigure = () => {
   return (
@@ -10,50 +10,53 @@ const BrowserFigure = () => {
         <Control1></Control1>
         <Control2></Control2>
         <Control3></Control3>
-        <GridWrapper>
-          <ItemBg>
-            <ItemOutline>
-              <Square />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-          <ItemBg>
-            <ItemOutline>
-              <Circle />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-          <ItemBg>
-            <ItemOutline>
-              <Triangle />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-          <ItemBg>
-            <ItemOutline>
-              <Square />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-          <ItemBg>
-            <ItemOutline>
-              <Circle />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-          <ItemBg>
-            <ItemOutline>
-              <Triangle />
-            </ItemOutline>
-            <ItemName></ItemName>
-            <Description></Description>
-          </ItemBg>
-        </GridWrapper>
+        <SlideWrapper>
+          <GridWrapper>
+            <ItemBg delay={1}>
+              <ItemOutline>
+                <Square delay={1.6} />
+              </ItemOutline>
+              <ItemName delay={1.6}></ItemName>
+              <Description delay={1.8}></Description>
+            </ItemBg>
+            <ItemBg delay={1.2}>
+              <ItemOutline>
+                <Circle delay={1.8} />
+              </ItemOutline>
+              <ItemName delay={1.8}></ItemName>
+              <Description delay={2}></Description>
+            </ItemBg>
+            <ItemBg delay={1.4}>
+              <ItemOutline>
+                <Triangle delay={2} />
+              </ItemOutline>
+              <ItemName delay={2}></ItemName>
+              <Description delay={2.2}></Description>
+            </ItemBg>
+            {/* Row 2 */}
+            <ItemBg delay={3}>
+              <ItemOutline>
+                <Square delay={3.6} />
+              </ItemOutline>
+              <ItemName delay={3.6}></ItemName>
+              <Description delay={3.8}></Description>
+            </ItemBg>
+            <ItemBg delay={3.2}>
+              <ItemOutline>
+                <Circle delay={3.8} />
+              </ItemOutline>
+              <ItemName delay={3.8}></ItemName>
+              <Description delay={4}></Description>
+            </ItemBg>
+            <ItemBg delay={3.4}>
+              <ItemOutline>
+                <Triangle delay={4} />
+              </ItemOutline>
+              <ItemName delay={4}></ItemName>
+              <Description delay={4.2}></Description>
+            </ItemBg>
+          </GridWrapper>
+        </SlideWrapper>
       </Background>
     </Wrapper>
   );
@@ -64,13 +67,34 @@ export default BrowserFigure;
 const GridWrapper = styled.div`
   display: grid;
   position: absolute;
-  top: 57px;
-  left: 30px;
+  top: 0;
+  left: 0;
   height: 247.11px;
   width: 436.96px;
   grid-gap: 18px;
   grid-template-rows: 113.64px 113.64px;
   grid-template-columns: 133.36px 133.36px 133.36px;
+
+  /* animation: slideup 1s infinite;
+  animation-fill-mode: forwards;
+  animation-delay: 4s;
+  @keyframes slideup {
+    0% {
+      transform: translateY(0%);
+    }
+    to {
+      transform: translateY(-54%);
+    }
+  } */
+`;
+
+const SlideWrapper = styled.div`
+  position: absolute;
+  top: 57px;
+  left: 30px;
+  height: 247.11px;
+  width: 436.96px;
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
@@ -137,6 +161,23 @@ const ItemBg = styled.div`
   height: 113px;
   background: #d4d4d4a3;
   border-radius: 6px;
+
+  ${(props) =>
+    props.delay &&
+    css`
+      transform: scale(0);
+      animation: appear 1s;
+      animation-fill-mode: forwards;
+      animation-delay: ${(props) => props.delay + "s"};
+      @keyframes appear {
+        0% {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    `}
 `;
 
 const ItemOutline = styled.div`
@@ -156,7 +197,24 @@ const ItemName = styled.div`
   height: 5.8px;
   border-radius: 6px;
   background: #fff;
-  margin: auto;
+  margin-left: 10.26px;
+  margin-right: auto;
+  ${(props) =>
+    props.delay &&
+    css`
+      width: 0;
+      animation: grow 1s;
+      animation-fill-mode: forwards;
+      animation-delay: ${(props) => props.delay + "s"};
+      @keyframes grow {
+        0% {
+          width: 0;
+        }
+        to {
+          width: 112.48px;
+        }
+      }
+    `}
 `;
 
 const Description = styled.div`
@@ -166,22 +224,57 @@ const Description = styled.div`
   background: #fff;
   margin-left: 10.26px;
   margin-top: 4px;
+  ${(props) =>
+    props.delay &&
+    css`
+      width: 0;
+      animation: growDescription 1s;
+      animation-fill-mode: forwards;
+      animation-delay: ${(props) => props.delay + "s"};
+      @keyframes growDescription {
+        0% {
+          width: 0;
+        }
+        to {
+          width: 67.2px;
+        }
+      }
+    `}
 `;
 
-const Square = styled.div`
+const Shape = styled.div`
+  ${(props) =>
+    props.delay &&
+    css`
+      transform: scale(0);
+      animation: appear 1s;
+      animation-fill-mode: forwards;
+      animation-delay: ${(props) => props.delay + "s"};
+      @keyframes appear {
+        0% {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    `}
+`;
+
+const Square = styled(Shape)`
   height: 50px;
   width: 50px;
   background-color: #fff;
 `;
 
-const Circle = styled.div`
+const Circle = styled(Shape)`
   height: 50px;
   width: 50px;
   background-color: #fff;
   border-radius: 50%;
 `;
 
-const Triangle = styled.div`
+const Triangle = styled(Shape)`
   width: 0;
   height: 0;
   border-left: 32px solid transparent;
