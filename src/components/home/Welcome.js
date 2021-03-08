@@ -11,7 +11,16 @@ const Welcome = () => {
     <>
       <Header isClear />
       <Wrapper>
-        <Gradient />
+        <Gradient>
+          <IFrame
+            title="Floating shapes"
+            src="https://my.spline.design/alecspringelcomshapescopy-18ef15da76055d032f96b95a113a3ab2/"
+            frameBorder="0"
+            width="100%"
+            height="110%"
+            style={{ position: "relative" }}
+          ></IFrame>
+        </Gradient>
         <Background />
         <SectionWrapper className="flex-row align">
           <TextWrapper className="flex-row align">
@@ -66,6 +75,7 @@ const SectionWrapper = styled.section`
 
 const Gradient = styled.div`
   position: absolute;
+  overflow: hidden;
   width: 100%;
   height: 100%;
   width: 100%;
@@ -143,3 +153,21 @@ const Figure = styled.figure`
 `;
 
 const CodeWindow = styled.img``;
+
+const IFrame = styled.iframe`
+  animation: iframeOpacity 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 5s;
+  opacity: 0;
+  @keyframes iframeOpacity {
+    0% {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 725px) {
+    animation-delay: 1s;
+  }
+`;
