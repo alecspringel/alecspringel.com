@@ -60,12 +60,11 @@ const Welcome = () => {
 export default Welcome;
 
 const SectionWrapper = styled.section`
-  min-height: 90vh;
+  min-height: 100vh;
   max-height: 860px;
   transform: scale(1.2);
   max-width: 1260px;
   margin: auto;
-  overflow-x: hidden;
   padding: 2rem 2rem;
 
   @media (max-width: 1560px) {
@@ -135,6 +134,7 @@ const Background = styled.div`
 
 const TextWrapper = styled.div`
   min-width: 367px;
+  margin-right: 60px;
   @media (max-width: 725px) {
     min-width: auto;
     * {
@@ -146,6 +146,7 @@ const TextWrapper = styled.div`
 
 const Figure = styled.figure`
   position: relative;
+  transform: scale(1.2);
   @media (max-width: 725px) {
     display: none;
     margin-bottom: 40px;
@@ -167,7 +168,13 @@ const IFrame = styled.iframe`
       opacity: 1;
     }
   }
+  @media (max-width: 1200px) {
+    width: 150%;
+    height: 96%;
+  }
   @media (max-width: 725px) {
     animation-delay: 1s;
+    width: 100%;
+    height: 110%;
   }
 `;
