@@ -95,11 +95,11 @@ const HeaderContainer = styled.header`
     props.isClear ? "transparent" : props.theme.background};
   height: 70px;
   z-index: 10;
-  transition: all 1s ease;
+  transition: all 0.4s ease;
   ${(props) =>
     !props.isVisible &&
     css`
-      top: -100%;
+      transform: translateY(-100%);
     `}
 
   ${(props) =>
