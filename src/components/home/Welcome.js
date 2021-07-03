@@ -41,15 +41,9 @@ const Welcome = () => {
             </div>
           </TextWrapper>
           <Figure>
-            <FadeIn delay={300}>
-              <CodeWindow src={CodeWindowSvg} />
-            </FadeIn>
-            <FadeIn
-              style={{ position: "absolute", top: "30%", left: "20%" }}
-              delay={500}
-            >
-              <BrowserFigure />
-            </FadeIn>
+            <CodeWindow src={CodeWindowSvg} />
+
+            <BrowserFigure />
           </Figure>
         </SectionWrapper>
       </Wrapper>

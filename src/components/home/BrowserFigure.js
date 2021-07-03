@@ -162,7 +162,7 @@ const ItemBg = styled.div`
   background: #d4d4d4a3;
   border-radius: 6px;
 
-  ${(props) =>
+  /* ${(props) =>
     props.delay &&
     css`
       transform: scale(0);
@@ -177,7 +177,7 @@ const ItemBg = styled.div`
           transform: scale(1);
         }
       }
-    `}
+    `} */
 `;
 
 const ItemOutline = styled.div`
@@ -199,7 +199,7 @@ const ItemName = styled.div`
   background: #fff;
   margin-left: 10.26px;
   margin-right: auto;
-  ${(props) =>
+  /* ${(props) =>
     props.delay &&
     css`
       width: 0;
@@ -214,7 +214,7 @@ const ItemName = styled.div`
           width: 112.48px;
         }
       }
-    `}
+    `} */
 `;
 
 const Description = styled.div`
@@ -224,7 +224,7 @@ const Description = styled.div`
   background: #fff;
   margin-left: 10.26px;
   margin-top: 4px;
-  ${(props) =>
+  /* ${(props) =>
     props.delay &&
     css`
       width: 0;
@@ -239,11 +239,11 @@ const Description = styled.div`
           width: 67.2px;
         }
       }
-    `}
+    `} */
 `;
 
 const Shape = styled.div`
-  ${(props) =>
+  /* ${(props) =>
     props.delay &&
     css`
       transform: scale(0);
@@ -258,7 +258,7 @@ const Shape = styled.div`
           transform: scale(1);
         }
       }
-    `}
+    `} */
 `;
 
 const Square = styled(Shape)`
