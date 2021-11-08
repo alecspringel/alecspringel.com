@@ -1,24 +1,25 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import ClickAway from "../common/ClickAway";
+import React, { useState } from 'react';
+import styled, { css } from 'styled-components';
+import ClickAway from '../common/ClickAway';
+import HamburgerMenu from '../../images/hamburger-menu.svg';
 
 const MobileNav = ({ children, height, isClear }) => {
   const [open, toggle] = useState(false);
   return (
     <ClickAway
-      style={{ display: "inline-block", height: "fit-content" }}
+      style={{ display: 'inline-block', height: 'fit-content' }}
       onClick={() => toggle(!open)}
       onClickAway={() => toggle(false)}
-      contents={
+      contents={(
         <>
           <Wrapper>
-            <MenuIcon src={require("../../images/hamburger-menu.svg")} />
+            <MenuIcon src={HamburgerMenu} />
             <Options open={open} height={height} isClear={isClear}>
               <ul>{children}</ul>
             </Options>
           </Wrapper>
         </>
-      }
+      )}
     />
   );
 };
@@ -45,10 +46,9 @@ const Options = styled.div`
   overflow: hidden;
   transition: max-height 0ms ease-in-out;
 
-  ${(props) =>
-    props.open &&
-    css`
-      background: ${(props) => props.isClear && "#000000de"};
+  ${(props) => props.open
+    && css`
+      background: ${(props) => props.isClear && '#000000de'};
       transition: max-height 150ms ease-in-out;
       max-height: ${(props) => props.height};
       box-shadow: 2px 3px 3px #00000033;

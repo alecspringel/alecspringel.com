@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
-import styled, { css } from "styled-components";
-import Logo from "../images/logo.svg";
-import WhiteLogo from "../images/logo-white.svg";
-import { Link } from "gatsby";
-import Button from "./common/Button";
-import MobileNav from "./mobileNav/MobileNav";
-import MobileOption from "./mobileNav/MobileOption";
+import React, { useEffect, useState } from 'react';
+import styled, { css } from 'styled-components';
+import { Link } from 'gatsby';
+import Logo from '../images/logo.svg';
+import WhiteLogo from '../images/logo-white.svg';
+import Button from './common/Button';
+import MobileNav from './mobileNav/MobileNav';
+import MobileOption from './mobileNav/MobileOption';
 
 /* isClear prop is used to separate the clear header/navigation
 used in the hero section, from the header/nav that dropsdown after
@@ -13,7 +13,7 @@ scrolling. isVisible variable determines wether or not to display
 the global navigation bar (which appears after scrolling down the page) */
 
 const Header = ({ isClear }) => {
-  const [isVisible, toggleVisibility] = useState(isClear ? true : false);
+  const [isVisible, toggleVisibility] = useState(!!isClear);
   const handleScroll = () => {
     if (window.pageYOffset > 500) {
       toggleVisibility(true);
@@ -24,9 +24,9 @@ const Header = ({ isClear }) => {
 
   useEffect(() => {
     if (!isClear) {
-      window.addEventListener("scroll", handleScroll);
+      window.addEventListener('scroll', handleScroll);
       return () => {
-        window.removeEventListener("scroll", handleScroll);
+        window.removeEventListener('scroll', handleScroll);
       };
     }
   }, [isClear]);
@@ -91,20 +91,17 @@ const HeaderContainer = styled.header`
   left: 0;
   width: 100%;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-  background-color: ${(props) =>
-    props.isClear ? "transparent" : props.theme.background};
+  background-color: ${(props) => (props.isClear ? 'transparent' : props.theme.background)};
   height: 70px;
   z-index: 10;
   transition: all 0.4s ease;
-  ${(props) =>
-    !props.isVisible &&
-    css`
+  ${(props) => !props.isVisible
+    && css`
       transform: translateY(-100%);
     `}
 
-  ${(props) =>
-    props.isClear &&
-    css`
+  ${(props) => props.isClear
+    && css`
       position: absolute;
       box-shadow: none;
       * {
@@ -158,12 +155,11 @@ const NavList = styled.ul`
     :hover {
       color: ${(props) => props.theme.primary};
     }
-    ${(props) =>
-      props.isClear &&
-      css`
+    ${(props) => props.isClear
+      && css`
         :hover {
-          color: ${(props) => "#fff"};
-          opacity: ${(props) => "0.8"};
+          color: #fff;
+          opacity: 0.8;
         }
       `}
   }

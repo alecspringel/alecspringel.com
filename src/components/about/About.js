@@ -1,61 +1,61 @@
-import React from "react";
-import styled from "styled-components";
-import CirclesFigure from "./CirclesFigure";
+import React from 'react';
+import styled from 'styled-components';
+import CirclesFigure from './CirclesFigure';
 
-const About = () => {
-  return (
-    <Section className="flex-row justify section" id="about">
-      <MobileLineWrapper>
-        <MobileLineDiv>
-          <div className="dashed-horizontal" style={{ width: "40%" }} />
-          <div className="dashed-vertical" style={{ height: "100%" }} />
-          <div className="dashed-horizontal" style={{ width: "40%" }} />
-        </MobileLineDiv>
-      </MobileLineWrapper>
-      <Line />
-      <FigureWrapper className="flex-row align">
-        <CirclesFigure />
-      </FigureWrapper>
-      <TextWrapper className="flex-col">
-        <h4 className="heading-color margin-b10">About Me</h4>
-        <AboutP>
-          Alec Springel
-          <br />
-          B.S. Computer &amp; Information Science, <br />
-          with a minor in Chemistry at the University of Oregon
-        </AboutP>
+const About = () => (
+  <Section className="flex-row justify section" id="about">
+    <MobileLineWrapper>
+      <MobileLineDiv>
+        <div className="dashed-horizontal" style={{ width: '40%' }} />
+        <div className="dashed-vertical" style={{ height: '100%' }} />
+        <div className="dashed-horizontal" style={{ width: '40%' }} />
+      </MobileLineDiv>
+    </MobileLineWrapper>
+    <Line />
+    <FigureWrapper className="flex-row align">
+      <CirclesFigure />
+    </FigureWrapper>
+    <TextWrapper className="flex-col">
+      <h4 className="heading-color margin-b10">About Me</h4>
+      <AboutP>
+        Alec Springel
+        <br />
+        B.S. Computer &amp; Information Science,
+        {' '}
+        <br />
+        with a minor in Chemistry at the University of Oregon
+      </AboutP>
 
-        <SkillsDiv className="flex-row">
-          <Line className="dashed-horizontal" />
-          <SkillsTitle>
-            <h6 className="heading-color">Skills</h6>
-          </SkillsTitle>
-          <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>NodeJS</li>
-            <li>Git</li>
-            <li>REST</li>
-          </ul>
-          <ul>
-            <li>HTML 5</li>
-            <li>CSS 3</li>
-            <li>ReactJS</li>
-            <li>React Native</li>
-            <li>GraphQL</li>
-          </ul>
-          <ul>
-            <li>MongoDB</li>
-            <li>AWS</li>
-            <li>AdobeXD</li>
-            <li>Figma</li>
-            <li>ElectronJS</li>
-          </ul>
-        </SkillsDiv>
-      </TextWrapper>
-    </Section>
-  );
-};
+      <SkillsDiv className="flex-row">
+        <Line className="dashed-horizontal" />
+        <SkillsTitle>
+          <h6 className="heading-color">Skills</h6>
+        </SkillsTitle>
+        <ul>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>NodeJS</li>
+          <li>Git</li>
+          <li>REST</li>
+        </ul>
+        <ul>
+          <li>HTML 5</li>
+          <li>CSS 3</li>
+          <li>ReactJS</li>
+          <li>React Native</li>
+          <li>GraphQL</li>
+        </ul>
+        <ul>
+          <li>MongoDB</li>
+          <li>AWS</li>
+          <li>AdobeXD</li>
+          <li>Figma</li>
+          <li>ElectronJS</li>
+        </ul>
+      </SkillsDiv>
+    </TextWrapper>
+  </Section>
+);
 
 export default About;
 

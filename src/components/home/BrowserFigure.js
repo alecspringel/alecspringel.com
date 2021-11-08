@@ -1,66 +1,64 @@
-import React from "react";
-import styled, { css } from "styled-components";
+import React from 'react';
+import styled, { css } from 'styled-components';
 
-const BrowserFigure = () => {
-  return (
-    <Wrapper>
-      <Background>
-        <TopBar></TopBar>
-        <SearchBar></SearchBar>
-        <Control1></Control1>
-        <Control2></Control2>
-        <Control3></Control3>
-        <SlideWrapper>
-          <GridWrapper>
-            <ItemBg delay={1}>
-              <ItemOutline>
-                <Square delay={1.6} />
-              </ItemOutline>
-              <ItemName delay={1.6}></ItemName>
-              <Description delay={1.8}></Description>
-            </ItemBg>
-            <ItemBg delay={1.2}>
-              <ItemOutline>
-                <Circle delay={1.8} />
-              </ItemOutline>
-              <ItemName delay={1.8}></ItemName>
-              <Description delay={2}></Description>
-            </ItemBg>
-            <ItemBg delay={1.4}>
-              <ItemOutline>
-                <Triangle delay={2} />
-              </ItemOutline>
-              <ItemName delay={2}></ItemName>
-              <Description delay={2.2}></Description>
-            </ItemBg>
-            {/* Row 2 */}
-            <ItemBg delay={3}>
-              <ItemOutline>
-                <Square delay={3.6} />
-              </ItemOutline>
-              <ItemName delay={3.6}></ItemName>
-              <Description delay={3.8}></Description>
-            </ItemBg>
-            <ItemBg delay={3.2}>
-              <ItemOutline>
-                <Circle delay={3.8} />
-              </ItemOutline>
-              <ItemName delay={3.8}></ItemName>
-              <Description delay={4}></Description>
-            </ItemBg>
-            <ItemBg delay={3.4}>
-              <ItemOutline>
-                <Triangle delay={4} />
-              </ItemOutline>
-              <ItemName delay={4}></ItemName>
-              <Description delay={4.2}></Description>
-            </ItemBg>
-          </GridWrapper>
-        </SlideWrapper>
-      </Background>
-    </Wrapper>
-  );
-};
+const BrowserFigure = () => (
+  <Wrapper>
+    <Background>
+      <TopBar />
+      <SearchBar />
+      <Control1 />
+      <Control2 />
+      <Control3 />
+      <SlideWrapper>
+        <GridWrapper>
+          <ItemBg delay={1}>
+            <ItemOutline>
+              <Square delay={1.6} />
+            </ItemOutline>
+            <ItemName delay={1.6} />
+            <Description delay={1.8} />
+          </ItemBg>
+          <ItemBg delay={1.2}>
+            <ItemOutline>
+              <Circle delay={1.8} />
+            </ItemOutline>
+            <ItemName delay={1.8} />
+            <Description delay={2} />
+          </ItemBg>
+          <ItemBg delay={1.4}>
+            <ItemOutline>
+              <Triangle delay={2} />
+            </ItemOutline>
+            <ItemName delay={2} />
+            <Description delay={2.2} />
+          </ItemBg>
+          {/* Row 2 */}
+          <ItemBg delay={3}>
+            <ItemOutline>
+              <Square delay={3.6} />
+            </ItemOutline>
+            <ItemName delay={3.6} />
+            <Description delay={3.8} />
+          </ItemBg>
+          <ItemBg delay={3.2}>
+            <ItemOutline>
+              <Circle delay={3.8} />
+            </ItemOutline>
+            <ItemName delay={3.8} />
+            <Description delay={4} />
+          </ItemBg>
+          <ItemBg delay={3.4}>
+            <ItemOutline>
+              <Triangle delay={4} />
+            </ItemOutline>
+            <ItemName delay={4} />
+            <Description delay={4.2} />
+          </ItemBg>
+        </GridWrapper>
+      </SlideWrapper>
+    </Background>
+  </Wrapper>
+);
 
 export default BrowserFigure;
 
@@ -162,13 +160,12 @@ const ItemBg = styled.div`
   background: #d4d4d4a3;
   border-radius: 6px;
 
-  /* ${(props) =>
-    props.delay &&
-    css`
+  /* ${(props) => props.delay
+    && css`
       transform: scale(0);
       animation: appear 1s;
       animation-fill-mode: forwards;
-      animation-delay: ${(props) => props.delay + "s"};
+      animation-delay: ${(props) => `${props.delay}s`};
       @keyframes appear {
         0% {
           transform: scale(0);
@@ -199,13 +196,12 @@ const ItemName = styled.div`
   background: #fff;
   margin-left: 10.26px;
   margin-right: auto;
-  /* ${(props) =>
-    props.delay &&
-    css`
+  /* ${(props) => props.delay
+    && css`
       width: 0;
       animation: grow 1s;
       animation-fill-mode: forwards;
-      animation-delay: ${(props) => props.delay + "s"};
+      animation-delay: ${(props) => `${props.delay}s`};
       @keyframes grow {
         0% {
           width: 0;
@@ -224,13 +220,12 @@ const Description = styled.div`
   background: #fff;
   margin-left: 10.26px;
   margin-top: 4px;
-  /* ${(props) =>
-    props.delay &&
-    css`
+  /* ${(props) => props.delay
+    && css`
       width: 0;
       animation: growDescription 1s;
       animation-fill-mode: forwards;
-      animation-delay: ${(props) => props.delay + "s"};
+      animation-delay: ${(props) => `${props.delay}s`};
       @keyframes growDescription {
         0% {
           width: 0;
@@ -243,13 +238,12 @@ const Description = styled.div`
 `;
 
 const Shape = styled.div`
-  /* ${(props) =>
-    props.delay &&
-    css`
+  /* ${(props) => props.delay
+    && css`
       transform: scale(0);
       animation: appear 1s;
       animation-fill-mode: forwards;
-      animation-delay: ${(props) => props.delay + "s"};
+      animation-delay: ${(props) => `${props.delay}s`};
       @keyframes appear {
         0% {
           transform: scale(0);

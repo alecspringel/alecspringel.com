@@ -1,55 +1,52 @@
-import React from "react";
-import styled from "styled-components";
-import Button from "../common/Button";
-import CodeWindowSvg from "../../images/CodeWindow.svg";
-import BrowserFigure from "./BrowserFigure";
-import Header from "../Header";
-import FadeIn from "../common/animation/FadeIn";
+import React from 'react';
+import styled from 'styled-components';
+import Button from '../common/Button';
+import CodeWindowSvg from '../../images/CodeWindow.svg';
+import BrowserFigure from './BrowserFigure';
+import Header from '../Header';
 
-const Welcome = () => {
-  return (
-    <>
-      <Header isClear />
-      <Wrapper>
-        <Gradient>
-          <IFrame
-            title="Floating shapes"
-            src="https://my.spline.design/alecspringelcomshapescopy-18ef15da76055d032f96b95a113a3ab2/"
-            frameBorder="0"
-            width="100%"
-            height="110%"
-            style={{ position: "relative" }}
-          ></IFrame>
-        </Gradient>
-        <Background />
-        <SectionWrapper className="flex-row align">
-          <TextWrapper className="flex-row align">
-            <div style={{ marginTop: 90 }}>
-              <h6 className="primary-color margin-b10 margin-t20">Hi, I'm</h6>
-              <h1 className="heading-color margin-b10">Alec Springel.</h1>
-              <h3 className="heading-color margin-b20">
-                A full-stack software engineer.
-              </h3>
-              <p style={{ maxWidth: 483 }}>
-                A full-stack engineer with a passion for creating solutions to
-                everyday problems. I enjoy building, designing, and deploying
-                scalable software.
-              </p>
-              <Button style={{ marginTop: 50 }} width="120px" href="/#contact">
-                Say Hello
-              </Button>
-            </div>
-          </TextWrapper>
-          <Figure>
-            <CodeWindow src={CodeWindowSvg} />
+const Welcome = () => (
+  <>
+    <Header isClear />
+    <Wrapper>
+      <Gradient>
+        <IFrame
+          title="Floating shapes"
+          src="https://my.spline.design/alecspringelcomshapescopy-18ef15da76055d032f96b95a113a3ab2/"
+          frameBorder="0"
+          width="100%"
+          height="110%"
+          style={{ position: 'relative' }}
+        />
+      </Gradient>
+      <Background />
+      <SectionWrapper className="flex-row align">
+        <TextWrapper className="flex-row align">
+          <div style={{ marginTop: 90 }}>
+            <h6 className="primary-color margin-b10 margin-t20">Hi, I&apos;m</h6>
+            <h1 className="heading-color margin-b10">Alec Springel.</h1>
+            <h3 className="heading-color margin-b20">
+              A full-stack software engineer.
+            </h3>
+            <p style={{ maxWidth: 483 }}>
+              A full-stack engineer with a passion for creating solutions to
+              everyday problems. I enjoy building, designing, and deploying
+              scalable software.
+            </p>
+            <Button style={{ marginTop: 50 }} width="120px" href="/#contact">
+              Say Hello
+            </Button>
+          </div>
+        </TextWrapper>
+        <Figure>
+          <CodeWindow src={CodeWindowSvg} />
 
-            <BrowserFigure />
-          </Figure>
-        </SectionWrapper>
-      </Wrapper>
-    </>
-  );
-};
+          <BrowserFigure />
+        </Figure>
+      </SectionWrapper>
+    </Wrapper>
+  </>
+);
 
 export default Welcome;
 
