@@ -80,6 +80,14 @@ p {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .dashed-horizontal {
   background-image: linear-gradient(
     to right,
@@ -118,6 +126,10 @@ p {
 }
 
 /* Margins */
+.margin-auto {
+  margin: auto;
+}
+
 .margin-tb5 {
   margin: 5px 0;
 }
