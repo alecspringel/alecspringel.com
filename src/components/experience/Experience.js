@@ -34,13 +34,13 @@ const Experience = () => {
       {/* BRING RECYCLING */}
       <Tile>
         <Date>
-          <p>October 2020 - Present</p>
+          <p>October 2020 - March 2021</p>
         </Date>
         <TitleBar className="flex-row align">
           <h6 className="heading-color">BRING Recycling,&nbsp;</h6>
           <p>Software Engineer (Volunteer)</p>
           <MobileDate>
-            <p>October 2020 - Present</p>
+            <p>October 2020 - March 2021</p>
           </MobileDate>
         </TitleBar>
         <TextPadding>
@@ -58,13 +58,13 @@ const Experience = () => {
       {/* LAST LAYER LLC */}
       <Tile>
         <Date>
-          <p>February 2019 - Present</p>
+          <p>February 2019 - March 2021</p>
         </Date>
         <TitleBar className="flex-row align">
           <h6 className="heading-color">Last Layer LLC,&nbsp;</h6>
           <p>Founder &amp; Software Engineer</p>
           <MobileDate>
-            <p>February 2019 - Present</p>
+            <p>February 2019 - March 2021</p>
           </MobileDate>
         </TitleBar>
         <TextPadding>
