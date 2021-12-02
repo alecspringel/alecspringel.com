@@ -44,6 +44,9 @@ const Header = ({ isClear }) => {
               <Link to="/#about">About</Link>
             </li>
             <li>
+              <Link to="/#projects">Projects</Link>
+            </li>
+            <li>
               <Link to="/#experience">Experience</Link>
             </li>
             <li>
@@ -62,9 +65,12 @@ const Header = ({ isClear }) => {
           <LogoImg src={isClear ? WhiteLogo : Logo} alt="Alec Logo" />
           <h6 className="heading-color">Alec Springel</h6>
         </a>
-        <MobileNav height="214px" isClear={isClear}>
+        <MobileNav height="261px" isClear={isClear}>
           <MobileOption>
             <Link to="/#about">About</Link>
+          </MobileOption>
+          <MobileOption>
+            <Link to="/#projects">Projects</Link>
           </MobileOption>
           <MobileOption>
             <Link to="/#experience">Experience</Link>
@@ -93,7 +99,7 @@ const HeaderContainer = styled.header`
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
   background-color: ${(props) => (props.isClear ? 'transparent' : props.theme.background)};
   height: 70px;
-  z-index: 10;
+  z-index: 2;
   transition: all 0.4s ease;
   ${(props) => !props.isVisible
     && css`
@@ -102,6 +108,7 @@ const HeaderContainer = styled.header`
 
   ${(props) => props.isClear
     && css`
+      z-index: 1;
       position: absolute;
       box-shadow: none;
       * {
@@ -116,7 +123,7 @@ const Navigation = styled.nav`
   padding: 0 29px;
   height: 100%;
   justify-content: space-between;
-  @media (max-width: 655px) {
+  @media (max-width: 740px) {
     display: none;
   }
 `;
@@ -126,7 +133,7 @@ const MobileNavigation = styled.nav`
   padding: 0 29px;
   height: 100%;
   justify-content: space-between;
-  @media (max-width: 655px) {
+  @media (max-width: 740px) {
     display: flex;
   }
 `;
@@ -156,7 +163,7 @@ const NavList = styled.ul`
       color: ${(props) => props.theme.primary};
     }
     ${(props) => props.isClear
-      && css`
+    && css`
         :hover {
           color: #fff;
           opacity: 0.8;

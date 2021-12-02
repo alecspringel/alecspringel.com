@@ -110,10 +110,9 @@ p {
 }
 
 .section {
-  padding: 100px 0;
-  margin: 70px auto;
+  padding: 100px 2rem;
+  margin: auto;
   max-width: 1260px;
-  padding: 0 2rem;
 }
 
 /* Colors */
