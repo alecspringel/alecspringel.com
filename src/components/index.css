@@ -80,6 +80,14 @@ p {
   text-align: center;
 }
 
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
 .dashed-horizontal {
   background-image: linear-gradient(
     to right,
@@ -102,10 +110,9 @@ p {
 }
 
 .section {
-  padding: 100px 0;
-  margin: 70px auto;
+  padding: 100px 2rem;
+  margin: auto;
   max-width: 1260px;
-  padding: 0 2rem;
 }
 
 /* Colors */
@@ -118,6 +125,10 @@ p {
 }
 
 /* Margins */
+.margin-auto {
+  margin: auto;
+}
+
 .margin-tb5 {
   margin: 5px 0;
 }

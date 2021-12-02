@@ -1,9 +1,7 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
-const MobileOption = ({ children }) => {
-  return <Item>{children}</Item>;
-};
+const MobileOption = ({ children }) => <Item>{children}</Item>;
 
 export default MobileOption;
 

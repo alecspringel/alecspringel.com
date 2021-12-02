@@ -1,47 +1,45 @@
-import React from "react";
-import styled from "styled-components";
-import Linkedin from "../../images/contact/linkedin.svg";
-import GitHub from "../../images/contact/github.svg";
-import Phone from "../../images/contact/phone.svg";
-import Email from "../../images/contact/email.svg";
+import React from 'react';
+import styled from 'styled-components';
+import Linkedin from '../../images/contact/linkedin.svg';
+import GitHub from '../../images/contact/github.svg';
+import Phone from '../../images/contact/phone.svg';
+import Email from '../../images/contact/email.svg';
 
-const Contact = () => {
-  return (
-    <Section className="section" id="contact">
-      <h3 className="heading-color">Contact</h3>
-      <Description className="margin-tb20">
-        Thanks for stopping by! I always enjoy meeting fellow developers and
-        hearing about new projects. Feel free to contact me by text, phone, or
-        email and I will get back to you as soon as possible.
-      </Description>
-      <FlexWrapper className="flex-row" style={{ marginTop: 80 }}>
-        <ContactCard href="tel:702-290-0858">
-          <Icon src={Phone} />
-          <h6 className="heading-color">Cell Phone</h6>
-          <p className="primary-color">+1 (702)-290-0858</p>
-        </ContactCard>
-        <ContactCard href="mailto:alecspringel@gmail.com">
-          <Icon src={Email} />
-          <h6 className="heading-color">Email</h6>
-          <p className="primary-color">alecspringel@gmail.com</p>
-        </ContactCard>
-        <ContactCard
-          href="https://www.linkedin.com/in/alec-springel/"
-          target="_blank"
-        >
-          <Icon src={Linkedin} />
-          <h6 className="heading-color">LinkedIn</h6>
-          <p className="primary-color">alec-springel</p>
-        </ContactCard>
-        <ContactCard href="https://github.com/alecspringel" target="_blank">
-          <Icon src={GitHub} />
-          <h6 className="heading-color">GitHub</h6>
-          <p className="primary-color">@alecspringel</p>
-        </ContactCard>
-      </FlexWrapper>
-    </Section>
-  );
-};
+const Contact = () => (
+  <Section className="section" id="contact">
+    <h3 className="heading-color">Contact</h3>
+    <Description className="margin-tb20">
+      Thanks for stopping by! I always enjoy meeting fellow developers and
+      hearing about new projects. Feel free to contact me by text, phone, or
+      email and I will get back to you as soon as possible.
+    </Description>
+    <FlexWrapper className="flex-row" style={{ marginTop: 80 }}>
+      <ContactCard href="tel:702-290-0858">
+        <Icon src={Phone} />
+        <h6 className="heading-color">Cell Phone</h6>
+        <p className="primary-color">+1 (702)-290-0858</p>
+      </ContactCard>
+      <ContactCard href="mailto:alecspringel@gmail.com">
+        <Icon src={Email} />
+        <h6 className="heading-color">Email</h6>
+        <p className="primary-color">alecspringel@gmail.com</p>
+      </ContactCard>
+      <ContactCard
+        href="https://www.linkedin.com/in/alec-springel/"
+        target="_blank"
+      >
+        <Icon src={Linkedin} />
+        <h6 className="heading-color">LinkedIn</h6>
+        <p className="primary-color">alec-springel</p>
+      </ContactCard>
+      <ContactCard href="https://github.com/alecspringel" target="_blank">
+        <Icon src={GitHub} />
+        <h6 className="heading-color">GitHub</h6>
+        <p className="primary-color">@alecspringel</p>
+      </ContactCard>
+    </FlexWrapper>
+  </Section>
+);
 
 export default Contact;
 
@@ -69,7 +67,7 @@ const ContactCard = styled.a`
 
   :hover {
     transform: translateY(-4px);
-    background: ${(props) => "#353535"};
+    background: #353535;
     img {
       transition: 150ms ease;
       transform: translateY(-4px);
