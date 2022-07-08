@@ -174,3 +174,15 @@ p {
 .align {
   align-items: center;
 }
+
+.indent {
+  margin-left: 10px;
+}
+
+.list {
+  line-height: 130%;
+}
+
+.list li {
+  margin-top: 7px;
+}
