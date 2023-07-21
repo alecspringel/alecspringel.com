@@ -1,23 +1,27 @@
 import React from 'react';
-import About from '../components/about/About';
-import Contact from '../components/contact/Contact';
-import Experience from '../components/experience/Experience';
-import Featured from '../components/featured/featured';
-import Welcome from '../components/home/Welcome';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
+import Navigation from '../sections/Navigation';
+import SEO from '../sections/seo';
+import Hero from '../sections/Hero';
+import Footer from '../sections/Footer';
+import '../index.css';
+import '../fonts.css';
+import '../devices.css';
+import Skills from '../sections/Skills';
+import Design from '../sections/Design';
+// import Contact from '../sections/Contact';
+// import Projects from '../sections/Projects';
 
 export default function Home() {
   return (
     <>
-      <Layout>
-        <SEO />
-        <Welcome />
-        <About />
-        <Featured />
-        <Experience />
-        <Contact />
-      </Layout>
+      <SEO />
+      <Navigation />
+      <Hero />
+      <Skills />
+      <Design />
+      {/* <Projects /> */}
+      {/* <Contact /> */}
+      <Footer />
     </>
   );
 }
