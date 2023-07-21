@@ -1,33 +1,29 @@
 {
   "name": "alecspringel.com",
-  "version": "1.0.0",
-  "description": "Portfolio and contact website for Alec Springel.",
+  "version": "2.0.0",
+  "description": "portfolio and contact site for alec springel",
   "author": "Alec Springel <alecspringel@gmail.com>",
   "scripts": {
-    "start": "gatsby develop",
+    "dev": "cross-env NODE_OPTIONS=--openssl-legacy-provider gatsby develop",
     "build": "gatsby build",
     "deploy": "npm run build && gatsby-plugin-s3 deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy-dev": "gatsby build && gatsby-plugin-s3 deploy",
+    "deploy-prod": "cross-env NODE_OPTIONS=--openssl-legacy-provider DEPLOY_ENV=prod gatsby build && gatsby-plugin-s3 deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alecspringel/alecspringel.com.git"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alecspringel/alecspringel.com/issues"
-  },
-  "homepage": "https://github.com/alecspringel/alecspringel.com#readme",
   "dependencies": {
-    "@fontsource/lato": "^4.2.1",
-    "@fontsource/poppins": "^4.2.1",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^2.32.8",
     "gatsby-image": "^2.11.0",
     "gatsby-plugin-gatsby-cloud": "^1.0.2",
+    "gatsby-plugin-google-gtag": "^5.11.0",
     "gatsby-plugin-manifest": "^2.12.1",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-react-helmet": "^3.10.0",
@@ -43,6 +39,7 @@
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.25.2",

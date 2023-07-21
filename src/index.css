@@ -1,0 +1,378 @@
+:root {
+  --background: #fff;
+  --primary: #4C48EF;
+  --primary-2: #AEACFF;
+  --text-color: #282830;
+  --max-width-padding: 0 30px;
+  --section-padding: 100px;
+  --heading-font: 'Poppins';
+  --body-font: 'DM Sans';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  font-family: var(--body-font);
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.max-width {
+  max-width: 1440px;
+}
+
+.mw-padding {
+  padding: var(--max-width-padding);
+}
+
+.section-p-t {
+  padding-top: var(--section-padding);
+}
+
+.section-p-b {
+  padding-bottom: var(--section-padding);
+}
+
+/* ===================== Text ===================== */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-bold {
+  font-weight: 700;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.color-dark {
+  color: var(--text-color);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-primary-2 {
+  color: var(--primary-2);
+}
+
+.heading {
+  font-family: var(--heading-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  margin: 0;
+  line-height: 150%;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-family: var(--body-font);
+  font-size: 18px;
+  line-height: 150%;
+  margin: 0;
+}
+
+/* ===================== Flex ===================== */
+.flex-row {
+  display: flex;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.jstfy-s {
+  justify-content: flex-start;
+}
+
+.jstfy-e {
+  justify-content: flex-end;
+}
+
+.jstfy-c {
+  justify-content: center;
+}
+
+.align-s {
+  align-items: flex-start;
+}
+
+.align-e {
+  align-items: flex-end;
+}
+
+.align-c {
+  align-items: center;
+}
+
+/* ===================== Margins ===================== */
+.m-auto {
+  margin: 0 auto;
+}
+
+.m-t0 {
+  margin-top: 0px;
+}
+
+.m-t4 {
+  margin-top: 4px;
+}
+
+.m-t8 {
+  margin-top: 8px;
+}
+
+.m-t12 {
+  margin-top: 12px;
+}
+
+.m-t16 {
+  margin-top: 16px;
+}
+
+.m-t20 {
+  margin-top: 20px;
+}
+
+.m-b0 {
+  margin-bottom: 0px;
+}
+
+.m-b4 {
+  margin-bottom: 4px;
+}
+
+.m-b8 {
+  margin-bottom: 8px;
+}
+
+.m-b12 {
+  margin-bottom: 12px;
+}
+
+.m-b16 {
+  margin-bottom: 16px;
+}
+
+.m-b20 {
+  margin-bottom: 20px;
+}
+
+.m-l0 {
+  margin-left: 0px;
+}
+
+.m-l4 {
+  margin-left: 4px;
+}
+
+.m-l8 {
+  margin-left: 8px;
+}
+
+.m-l12 {
+  margin-left: 12px;
+}
+
+.m-l16 {
+  margin-left: 16px;
+}
+
+.m-l20 {
+  margin-left: 20px;
+}
+
+.m-r0 {
+  margin-right: 0px;
+}
+
+.m-r4 {
+  margin-right: 4px;
+}
+
+.m-r8 {
+  margin-right: 8px;
+}
+
+.m-r12 {
+  margin-right: 12px;
+}
+
+.m-r16 {
+  margin-right: 16px;
+}
+
+.m-r20 {
+  margin-right: 20px;
+}
+
+/* ===================== Padding ===================== */
+.p-auto {
+  padding: auto;
+}
+
+.p-t0 {
+  padding-top: 0;
+}
+
+.p-t4 {
+  padding-top: 4px;
+}
+
+.p-t8 {
+  padding-top: 8px;
+}
+
+.p-t12 {
+  padding-top: 12px;
+}
+
+.p-t16 {
+  padding-top: 16px;
+}
+
+.p-t20 {
+  padding-top: 20px;
+}
+
+.p-b0 {
+  padding-bottom: 0;
+}
+
+.p-b4 {
+  padding-bottom: 4px;
+}
+
+.p-b8 {
+  padding-bottom: 8px;
+}
+
+.p-b12 {
+  padding-bottom: 12px;
+}
+
+.p-b16 {
+  padding-bottom: 16px;
+}
+
+.p-b20 {
+  padding-bottom: 20px;
+}
+
+.p-l0 {
+  padding-left: 0;
+}
+
+.p-l4 {
+  padding-left: 4px;
+}
+
+.p-l8 {
+  padding-left: 8px;
+}
+
+.p-l12 {
+  padding-left: 12px;
+}
+
+.p-l16 {
+  padding-left: 16px;
+}
+
+.p-l20 {
+  padding-left: 20px;
+}
+
+.p-r0 {
+  padding-right: 0;
+}
+
+.p-r4 {
+  padding-right: 4px;
+}
+
+.p-r8 {
+  padding-right: 8px;
+}
+
+.p-r12 {
+  padding-right: 12px;
+}
+
+.p-r16 {
+  padding-right: 16px;
+}
+
+.p-r20 {
+  padding-right: 20px;
+}
