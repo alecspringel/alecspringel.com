@@ -26,12 +26,17 @@ const SEO = ({
 
   return (
     <Helmet title={seo.title}>
+      <html lang="en" />
       <meta name="description" content={seo.description} />
+      <meta name="theme-color" content="#090B2B" />
+      <link rel="preload" href="/fonts/poppins-all-500-normal.woff" as="font" type="font/woff" crossOrigin="anonymous" />
+      <link rel="preload" href="/fonts/dm-sans-v11-latin-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       <meta name="image" content={seo.image} />
 
       {seo.url && <meta property="og:url" content={seo.url} />}
 
-      {(article ? true : null) && <meta property="og:type" content="article" />}
+      <meta property="og:type" content={article ? 'article' : 'website'} />
+      <meta property="og:site_name" content="Alec Springel" />
 
       {seo.title && <meta property="og:title" content={seo.title} />}
 
@@ -40,6 +45,9 @@ const SEO = ({
       )}
 
       {seo.image && <meta property="og:image" content={seo.image} />}
+      {seo.image && <meta property="og:image:width" content="1200" />}
+      {seo.image && <meta property="og:image:height" content="630" />}
+      {seo.image && <meta property="og:image:alt" content="Alec Springel, frontend platform and full-stack engineer" />}
 
       <meta name="twitter:card" content="summary_large_image" />
 
