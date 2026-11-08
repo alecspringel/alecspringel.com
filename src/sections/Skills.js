@@ -1,32 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
 import { MEDIA_QUERY } from '../constants';
-import PhonePNG from '../images/phone.png';
-import ServerPNG from '../images/server.png';
+import PhonePNG from '../images/phone.webp';
+import ServerPNG from '../images/server.webp';
+import { OVERVIEW } from '../content';
 
 const Skills = () => (
-  <section style={{ overflow: 'hidden' }} id="about">
-    <SectionBorder className="mw-padding max-width" style={{ padding: '300px 30px' }}>
+  <section style={{ overflow: 'hidden', position: 'relative', isolation: 'isolate' }} id="about">
+    <SectionBorder className="max-width">
       <div className="skills-flex-wrapper flex-row align-c jstfy-c">
         <div style={{ flex: 1 }}>
-          <h6 className="text-primary m-b12">Skills & Specialization</h6>
-          <Heading className="m-b20">Web development & beyond</Heading>
-          <p>
-            As a developer, I have dedicated my time to creating tools for the web.
-            With over 5 years of experience with web technologies, I&apos;m focused on
-            helping businesses generate revenue, grow new customers, and simplify processes in
-            the workplace.
-            <br />
-            <br />
-            Some of my past projects include customer portals,
-            tools for tracking product inventory and business metrics, and even
-            a message board for students and teachers.
-          </p>
+          <h6 className="text-primary m-b12">About</h6>
+          <Heading className="m-b20">A bit about me</Heading>
+          {OVERVIEW.map((paragraph, i) => (
+            <p key={paragraph} className={i ? 'm-t16' : ''}>{paragraph}</p>
+          ))}
         </div>
         <div style={{ flex: 1, maxWidth: '100%' }}>
           <DeviceWrapper className="flex-row jstfy-e">
-            <PhoneImg src={PhonePNG} alt="phone with different apps, languages and software frameworks" />
-            <ServerImg src={ServerPNG} alt="server building an application" />
+            <SmallCircle aria-hidden="true" />
+            <PhoneImg src={PhonePNG} alt="" />
+            <ServerImg src={ServerPNG} alt="" />
           </DeviceWrapper>
         </div>
       </div>
@@ -50,20 +44,23 @@ const Heading = styled.h3`
 const DeviceWrapper = styled.div`
   position: absolute;
   top: 23%;
-  ${MEDIA_QUERY.PHONE} {
+  ${MEDIA_QUERY.SMALL_LAPTOPS} {
     position: relative;
-    margin-bottom: 40px;
+    top: 0;
+    margin-top: 56px;
+    width: 100%;
+    max-width: 600px;
   }
 `;
 
-const PhoneImg = styled.img`
+const PhoneImg = styled.img.attrs({ loading: 'lazy', decoding: 'async' })`
   margin-right: 10px;
   z-index: 1;
   object-fit: contain;
   width: 290px;
 `;
 
-const ServerImg = styled.img`
+const ServerImg = styled.img.attrs({ loading: 'lazy', decoding: 'async' })`
   margin-right: 0px;
   z-index: 1;
   object-fit: contain;
@@ -97,8 +94,36 @@ const Circle3 = styled.div`
   z-index: -2;
 `;
 
+// Circle for stacked layouts (992px and below). It lives inside the image group, so it
+// is sized and centered relative to the images at any width and bleeds off the right edge.
+const SmallCircle = styled.div`
+  display: none;
+  position: absolute;
+  z-index: 0; /* the images are z-index 1 */
+  top: 50%;
+  right: -16%;
+  width: 72%;
+  aspect-ratio: 1 / 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #D7D6FF 0%, #A6A4F7 100%);
+  pointer-events: none;
+
+  ${MEDIA_QUERY.SMALL_LAPTOPS} {
+    display: block;
+  }
+
+  ${MEDIA_QUERY.PHONE} {
+    right: -20%;
+    width: 78%;
+  }
+`;
+
+// z-index -1 keeps the circle behind the text; the section's isolation keeps it
+// above the page background.
 const CircleContainer = styled.div`
   position: absolute;
+  z-index: -1;
   height: 100%;
   width: 500px;
   top: 0;
@@ -113,20 +138,30 @@ const SectionBorder = styled.div`
   margin: auto;
   height: 100%;
   position: relative;
+  padding: 160px 30px;
+
+  ${MEDIA_QUERY.SMALL_LAPTOPS} {
+    .skills-flex-wrapper {
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    /* Once text and images stack, SmallCircle (inside the image group) takes over */
+    ${CircleContainer} {
+      display: none;
+    }
+
+    ${PhoneImg} {
+      width: 38%;
+    }
+
+    ${ServerImg} {
+      width: 60%;
+    }
+  }
 
   ${MEDIA_QUERY.PHONE} {
-    padding: 200px 30px;
-
-    .skills-flex-wrapper {
-      flex-direction: column-reverse;
-    }
-
-    ${CircleContainer} {
-      height: auto;
-      top: 20%;
-      transform: rotate(180deg);
-      z-index: -1;
-    }
+    padding: 100px 16px;
 
     ${DeviceWrapper} {
       align-items: baseline;

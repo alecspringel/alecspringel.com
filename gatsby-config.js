@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: 'Alec Springel',
-    description: 'Portfolio and client portal for software and web development services',
+    title: 'Alec Springel · Frontend Platform & Full-Stack Engineer',
+    description: 'Alec Springel is a frontend platform and full-stack engineer at Nike, building React and TypeScript platforms, microfrontends, and developer tooling used across Nike.com and Nike retail stores.',
     url: 'https://alecspringel.com',
     image: '/meta-img.jpg',
     author: '@alecspringel',
@@ -23,7 +23,7 @@ module.exports = {
       options: {
         name: 'Alec Springel',
         short_name: 'Alec Springel',
-        description: 'Portfolio and client portal for software and web development services',
+        description: 'Alec Springel is a frontend platform and full-stack engineer at Nike, building React and TypeScript platforms, microfrontends, and developer tooling used across Nike.com and Nike retail stores.',
         start_url: '/',
         background_color: '#090B2B',
         theme_color: '#090B2B',
